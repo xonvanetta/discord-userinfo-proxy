@@ -12,6 +12,10 @@ RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w -X main.version=
 
 FROM gcr.io/distroless/static:nonroot@sha256:8ce6dd87e9823c5b48dcfb2c8604714ccb351ce59607327bcc4957448da279b5
 
+LABEL org.opencontainers.image.source="https://github.com/xonvanetta/discord-userinfo-proxy"
+LABEL org.opencontainers.image.description="Discord userinfo proxy for Dex: gates login on guild membership and maps roles to groups"
+LABEL org.opencontainers.image.licenses="MIT"
+
 COPY --from=builder /discord-userinfo-proxy /discord-userinfo-proxy
 
 USER nonroot:nonroot
