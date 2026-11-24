@@ -1,0 +1,8 @@
+.env
+.env.*
+.git
+.github
+.idea
+.claude
+tmp
+/discord-userinfo-proxy

@@ -1,0 +1,5 @@
+/discord-userinfo-proxy
+.env
+.env.*
+/tmp/
+.idea/
